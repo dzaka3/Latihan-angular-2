@@ -4,11 +4,17 @@
 <form>
   <div class="container">
   <div class="row">
-  <div class="input-group mb-3">
-    <input type="text" for="inputIsbn" class="form-control" placeholder="ISBN" [(ngModel)]="inputInfo.isbn" id="inputIsbn">
-    <input type="text" for="inputBuku" class="form-control" placeholder="Nama Buku" [(ngModel)]="inputInfo.buku" id="inputBuku">
-    <input type="text" for="inputQty" class="form-control" placeholder="Quantity" [(ngModel)]="inputInfo.qty" id="inputQty">
-    <button class="btn btn-success" type="submit" (click)="tambahBuku(inputQty)">Go</button>
+  <div class="input-group mb-4">
+    <div class="col-sm-2">
+    <input type="text" class="form-control"  placeholder="ISBN" [(ngModel)]="inputInfo.isbn" id="inputIsbn" #inputIsbn value="{{bukuEdit.isbn}}" [ngModelOptions]="{standalone: true}" >
+    </div>
+    <div class="col-sm-4">
+      <input type="text" class="form-control"  placeholder="Nama Buku" [(ngModel)]="inputInfo.buku" id="inputBuku" #inputBuku value="{{bukuEdit.buku}}" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="col-sm-2">
+    <input type="text" class="form-control"  placeholder="Quantity" [(ngModel)]="inputInfo.qty" id="inputQty" #inputQty value="{{bukuEdit.qty}}" [ngModelOptions]="{standalone: true}">
+    </div>
+      <button class="col-sm-4" class="btn btn-success" type="submit" (click)="tambahBuku(inputQty)">Go</button>
   </div>
   </div>
   </div>

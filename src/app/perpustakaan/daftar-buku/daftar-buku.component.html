@@ -22,9 +22,9 @@
   <tr *ngFor="let t of bukuParent; let i=index" [appHoverHighlight] = "{background: 'yellow',text:'red'}" >
     <td>{{ i + 1 }}</td>
     <td>{{ t.isbn}}</td>
-    <td>{{ t.qty }}</td>
     <td>{{ t.buku }}</td>
-    <td><button (click)="showname(i)">Hapus</button></td>
+    <td>{{ t.qty }}</td>
+    <td><button  class="btn btn-danger" (click)="showname(i)">Hapus</button></td>
   </tr>
   </tbody>
 </table>
