@@ -1,0 +1,9 @@
+<app-tambah-buku
+  [bukuEdit]=bukuEdit
+  (bukuAdded)="onBukuAdded($event)">
+</app-tambah-buku>
+<!--manggil class yang telah dibuat untuk di tampilkan-->
+<app-daftar-buku
+  [bukuParent]=bukuList
+  (dariChildKeParent)="onBukuEdit($event)">
+</app-daftar-buku>

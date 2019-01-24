@@ -1,0 +1,30 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>
+      No
+    </th>
+    <th>
+      ISBN
+    </th>
+    <th>
+      Nama Buku
+    </th>
+    <th>
+      Quantity
+    </th>
+    <th>
+      Action
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let t of bukuParent; let i=index" [appHoverHighlight] = "{background: 'yellow',text:'red'}" >
+    <td>{{ i + 1 }}</td>
+    <td>{{ t.isbn}}</td>
+    <td>{{ t.qty }}</td>
+    <td>{{ t.buku }}</td>
+    <td><button (click)="showname(i)">Hapus</button></td>
+  </tr>
+  </tbody>
+</table>

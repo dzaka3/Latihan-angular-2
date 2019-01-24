@@ -1,0 +1,7 @@
+.navbar {
+  background: aqua;
+}
+
+.navbar.navbar-no-bg {
+  background: cadetblue;
+}

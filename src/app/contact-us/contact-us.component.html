@@ -1,0 +1,53 @@
+<br/>
+<hr/>
+
+<form [formGroup]="contactForm" (ngSubmit)="kirim()">
+  <div class="form-group row">
+    <label class="col-sm-3 form-check-label">Your Name</label>
+    <div class="col-sm-6">
+      <input type="text" [formControlName]="'username'" class="form-control">
+      <span *ngIf = "!contactForm.get('username').valid && contactForm.get('username').touched" class='help-block'>
+      <span *ngIf = "contactForm.get('username').errors['required']">
+        Wajib diisi..!
+      </span>
+        <span *ngIf = "contactForm.get('username').errors['blank']">
+        Tidak boleh kosong
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-3 form-check-label">Your Mail</label>
+    <div class="col-sm-6">
+      <input type="text" [formControlName]="'usermail'" class="form-control">
+      <span *ngIf = "!contactForm.get('usermail').valid && contactForm.get('usermail').touched" class='help-block'>
+      <span *ngIf = "contactForm.get('usermail').errors['required']">
+        Wajib diisi..!
+      </span>
+        <span *ngIf = "contactForm.get('usermail').errors['blank']">
+        Tidak boleh kosong
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-3 form-check-label">Your Massage</label>
+    <div class="col-sm-6">
+      <input type="text" [formControlName]="'usermsg'" class="form-control">
+      <span *ngIf = "!contactForm.get('usermsg').valid && contactForm.get('usermsg').touched" class='help-block'>
+      <span *ngIf = "contactForm.get('usermsg').errors['required']">
+        Wajib diisi..!
+      </span>
+      <span *ngIf = "contactForm.get('usermsg').errors['blank']">
+        Tidak boleh kosong
+      </span>
+      </span>
+    </div>
+  </div>
+
+<div class="col-sm-12 form-control-label">
+  <button type="Submit" class="btn btn-danger" (click)="kirim()">Send</button>
+</div>
+</form>
